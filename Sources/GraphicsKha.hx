@@ -204,7 +204,7 @@ class GraphicsKha {
         var polyPairs = new ArrayPairs( poly );
         var polySin = new Array<Float>();
         for( pair in polyPairs ){
-            polySin.push( pair.x );//+ 2*Math.sin( timeSlice*(Math.PI/180 ) ));
+            polySin.push( pair.x );
             polySin.push( pair.y + 30*Math.sin( timeSlice*(Math.PI/180 ) ));
         }
         timeSlice += 3;
