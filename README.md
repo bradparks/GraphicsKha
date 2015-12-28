@@ -2,9 +2,13 @@ A example of a Kha graphics4 use, also loads a image and use the keyboard and mo
 Has PolyK included also MIT
 
 References
+
 http://luboslenco.com/kha3d/ see example 6.
+
 https://github.com/RafaelOliveira/BasicKha
+
 polyk.ivank.net
+
 see also TwoLines previous experiments
 
 ### How to use
