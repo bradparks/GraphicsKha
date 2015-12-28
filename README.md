@@ -1,7 +1,7 @@
 A example of a Kha graphics4 use, also loads a image and use the keyboard and mouse as per BasicKha.
 Has PolyK included also MIT
 
-[![](view here:)](https://cdn.rawgit.com/Justinfront/GraphicsKha/master/build/html5/graphicsKha_.html)
+[![]view here](https://cdn.rawgit.com/Justinfront/GraphicsKha/master/build/html5/graphicsKha_.html)
 
 References
 
