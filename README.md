@@ -1,6 +1,10 @@
 A example of a Kha graphics4 use, also loads a image and use the keyboard and mouse as per BasicKha.
 Has PolyK included also MIT
 
+view here:
+
+<iframe src="https://cdn.rawgit.com/Justinfront/GraphicsKha/master/build/html5/graphicsKha_.html" frameborder="0" scrolling="0" width="1280px" height="720px"></iframe>
+
 References
 
 http://luboslenco.com/kha3d/ see example 6.
