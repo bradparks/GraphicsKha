@@ -1,4 +1,4 @@
-var project = new Project('BasicKha');
+var project = new Project('GraphicsKha');
 
 project.addAssets('Assets/**');
 project.addSources('Sources');
