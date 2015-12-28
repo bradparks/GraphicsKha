@@ -82,7 +82,7 @@ class GraphicsKha {
         pipeline.fragmentShader = Shaders.simple_frag;
         pipeline.vertexShader = Shaders.simple_vert;
         // Set depth mode
-        pipeline.depthWrite = true;
+        pipeline.depthWrite = false;
         pipeline.depthMode = CompareMode.Less;
         pipeline.compile();
         
@@ -149,14 +149,14 @@ class GraphicsKha {
         // vertexBufferLen = Std.int(vertices.length / 3)
         // Create vertex buffer
         vertexBuffer = new VertexBuffer(
-            100000, // Vertex count - 3 floats per vertex
+            300000, // Vertex count - 3 floats per vertex
             structure, // Vertex structure
             Usage.DynamicUsage // Vertex data will stay the same
         );
         // indicesLen = indices.length;
         // Create index buffer
         indexBuffer = new IndexBuffer(
-            100000  , // Number of indices for our cube
+            300000  , // Number of indices for our cube
             Usage.DynamicUsage // Index data will stay the same
         );
     }
@@ -204,7 +204,7 @@ class GraphicsKha {
         var polyPairs = new ArrayPairs( poly );
         var polySin = new Array<Float>();
         for( pair in polyPairs ){
-            polySin.push( pair.x );
+            polySin.push( pair.x );//+ 2*Math.sin( timeSlice*(Math.PI/180 ) ));
             polySin.push( pair.y + 30*Math.sin( timeSlice*(Math.PI/180 ) ));
         }
         timeSlice += 3;
@@ -243,7 +243,7 @@ class GraphicsKha {
         TwoLines.circleOutline( 950, 600, 100 );
         
         // polygons
-        z = 1;
+        z = 1.1;
         TwoLines.thickness = 80;
         TwoLines.opaqueColor( 0xffcc00 );
         TwoLines.hexagonOutline( 950, 180, 100 );
@@ -363,7 +363,7 @@ class GraphicsKha {
         for( i in 0...lv ) vertices.pop();
         var lc = colors.length;
         for( i in 0...lc ) colors.pop();
-        //graphicsTests();
+        graphicsTests();
         polykTest();
         drawBorder();
         updateVectors();
@@ -375,12 +375,12 @@ class GraphicsKha {
         g2.drawImage(ball, xPos, yPos);
         g2.end();
         
-        vectorLayer = Image.createRenderTarget(1280, 720);
+        //vectorLayer = Image.createRenderTarget(1280, 720);
         var g4 = vectorLayer.g4;
         var g2 = vectorLayer.g2;
         g2.imageScaleQuality = ImageScaleQuality.High;
         g4.begin();
-        //g4.clear(Color.fromValue(0xff000000),1.0, 1);
+        g4.clear(Color.fromValue(0xff000000));
         g4.setVertexBuffer(vertexBuffer);
         g4.setIndexBuffer(indexBuffer);
         g4.setPipeline(pipeline);
