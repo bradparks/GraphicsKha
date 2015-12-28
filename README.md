@@ -2,8 +2,22 @@ A example of a Kha graphics4 use, also loads a image and use the keyboard and mo
 Has PolyK included also MIT
 
 view here:
-
-<iframe src="https://cdn.rawgit.com/Justinfront/GraphicsKha/master/build/html5/graphicsKha_.html" frameborder="0" scrolling="0" width="1280px" height="720px"></iframe>
+```html
+<html>
+  <head>
+    <style>
+    #graph {
+      width: 1280px;
+      height: 720px;
+      border: 1px solid grey;
+    }
+    </style>
+  </head>
+  <body>
+    <iframe src="https://cdn.rawgit.com/Justinfront/GraphicsKha/master/build/html5/graphicsKha_.html" frameborder="0" scrolling="0" width="1280px" height="720px"></iframe>
+  </body>
+</html>
+```
 
 References
 
