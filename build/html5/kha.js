@@ -46,7 +46,7 @@ var GraphicsKha = function() {
 	}(this));
 	this.initialized = false;
 	this.pixelLayer = kha_Image.createRenderTarget(1280,720);
-	this.vectorLayer = kha_Image.createRenderTarget(1280,720,kha_graphics4_TextureFormat.RGBA32,true,4);
+	this.vectorLayer = kha_Image.createRenderTarget(1280,720);
 	var keyboard = kha_input_Keyboard.get();
 	keyboard.notify($bind(this,this.keyDown),$bind(this,this.keyUp));
 	var mouse = kha_input_Mouse.get();
@@ -522,7 +522,7 @@ var Main = function() { };
 $hxClasses["Main"] = Main;
 Main.__name__ = true;
 Main.main = function() {
-	kha_System.init("BasicKha",1280,720,Main.initialized);
+	kha_System.init("GraphicsKha",1280,720,Main.initialized);
 };
 Main.initialized = function() {
 	var game = new GraphicsKha();

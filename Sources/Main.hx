@@ -7,7 +7,7 @@ class Main
 {
 	public static function main()
 	{
-		System.init("BasicKha", 1280, 720, initialized);
+		System.init("GraphicsKha", 1280, 720, initialized);
 	}
 	
 	private static function initialized():Void 
